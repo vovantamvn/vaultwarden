@@ -3,6 +3,8 @@ services:
     image: vaultwarden/server:1.37.1
     container_name: vaultwarden
     restart: unless-stopped
+    ports:
+      - "9000:80"
     environment:
       SIGNUPS_ALLOWED: "false"
       DOMAIN: "https://vw.tamvo.dpdns.org"
