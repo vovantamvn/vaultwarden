@@ -2,6 +2,12 @@ services:
   vaultwarden:
     image: vaultwarden/server:1.37.3
     container_name: vaultwarden
+    labels:
+      service: cash-tracking
+    logging:
+      driver: json-file
+      options:
+        labels: service
     restart: unless-stopped
     ports:
       - "127.0.0.1:9000:80"
