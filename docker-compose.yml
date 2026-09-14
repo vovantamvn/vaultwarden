@@ -3,7 +3,7 @@ services:
     image: vaultwarden/server:1.37.3
     container_name: vaultwarden
     labels:
-      service: cash-tracking
+      service: vaultwarden
     logging:
       driver: json-file
       options:
